@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وبسایت کودک و سرگرمی رهام کیدز - Rohamkids Website</title>
+</head>
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    @font-face {
+        font-family: 'vazir';
+        font-style: black;
+        font-weight: 700;
+        src: url('fonts/Vazir-Black.woff') format('woff');
+
+    }
+
+    @font-face {
+        font-family: 'vazir';
+        font-style: normal;
+        font-weight: 400;
+        src: url('fonts/Vazir-Light.woff') format('woff');
+
+    }
+
+    body {
+        background-color: #f8f8f8;
+        color: #646464;
+        font-family: vazir, tahoma;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    .wrapper {
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: -100px;
+        justify-content: flex-start;
+
+    }
+
+
+
+    .top {
+
+        margin-top: 20px
+    }
+
+
+
+    .down {
+        margin-bottom: 20px;
+
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+
+    }
+
+    .main-nav-1 {
+        margin-top: 50px
+    }
+
+
+    .main-nav-3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+
+    .caption {
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .card {
+
+        margin: 1%;
+        padding: 10px 25px;
+        border-radius: 20px;
+        background-color: #ffffff;
+    }
+
+
+    .btn {
+        cursor: pointer;
+    }
+
+
+
+
+    .about {
+        position: fixed;
+        top: 100px;
+        left: 69px;
+        border: 0px #e6e6e6 solid;
+        padding: 16px 10px 13px 10px;
+        border-radius: 50px;
+        background-color: white;
+        box-shadow: 20px 0px 50px rgba(34, 255, 51, 0.34), -20px 0px 50px rgba(255, 34, 128, 0.34);
+        cursor: pointer;
+
+    }
+
+    .about:hover {
+        box-shadow: 5px 0px 50px rgba(34, 255, 51, 0.34), -5px 0px 50px rgba(255, 34, 128, 0.34);
+    }
+
+    .logo {
+        position: fixed;
+        top: 20px;
+        left: 35px;
+        cursor: pointer;
+        width: 125px;
+    }
+
+    .donate {
+        max-width: 350px;
+        min-width: 200px
+    }
+
+    .footer {
+        background-color: #ffffff;
+        font-size: 12px
+    }
+
+    .margin-30 {
+        margin: 25px 0px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .logo {
+            width: 70px;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+        }
+
+        .about {
+            position: fixed;
+            top: 45px;
+            left: 21px;
+            border: 0px #e6e6e6 solid;
+            padding: 16px 10px 13px 10px;
+            border-radius: 50px;
+            background-color: white;
+            box-shadow: 20px 0px 50px rgba(34, 255, 51, 0.34), -20px 0px 50px rgba(255, 34, 128, 0.34);
+            cursor: pointer;
+
+        }
+
+    }
+</style>
+
+<style>
+    /* The Modal (background) */
+    .modal {
+        text-align: center;
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #f0f0f0;
+        color: #4d4d4d;
+    }
+
+    .modal-body {
+        padding: 2px 16px;
+    }
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #f7f7f7;
+        color: #5f5f5f;
+    }
+
+    .roham-picture {
+        max-width: 550px
+    }
+
+    .desc {
+        text-align: center;
+display: none;
+    }
+</style>
+
+<body>
+            <p class="desc">
+                وبسایت رسمی شبکه رهام کیدز - رهام چراغی مجری کودک شبکه سرگرم کننده کودکان
+            </p>
+            <p class="desc">
+                Roham Kids, is a Presian children's entertainments online channel .
+            </p>
+    <h4 id="myBtn" class="about">درباره</h4>
+    <img class="logo" src="images/logo.png" alt="Roham kids Logo">
+    <div class="wrapper">
+
+        <div class="main-nav">
+
+            <div class="main-nav-1">
+                <img class="roham-picture" width="55%" src="images/Roham-cheraghi.png" alt="رهام چراغی - قخاشئ نهیس - رهام کیدز- roham kids">
+            </div>
+
+
+            <p>ما رو دنبال کنید</p>
+
+            <div class="main-nav-3">
+
+                <div class="card">
+                    <a class="btn" href="https://www.youtube.com/channel/UCAA_3m_xGMXlpkCgxKzTXAA" target="_blank"><img width="55px" src="images/youtube.png" alt="شبکه یوتیوب رهام کیدز"></a>
+                    <p class="caption">یوتیوب</p>
+                </div>
+
+                <div class="card">
+                    <a class="btn" href="https://www.instagram.com/roham_kids_show/" target="_blank"><img width="55px" src="images/insta.png" alt="شبکه اینستا گرام رهام کیدز"></a>
+                    <p class="caption">اینستا</p>
+                </div>
+
+                <div class="card">
+                    <a class="btn" href="https://www.aparat.com/RohamKids" target="_blank"><img width="55px" src="images/aparat.png" alt="شبکه آپارات رهام کیدز"></a>
+                    <p class="caption">آپارات</p>
+                </div>
+
+
+            </div>
+
+            <div class="card">
+                <p> حامی و مشوق رهام کیدز باشید </p>
+                <a href="https://www.aparat.com/RohamKids" target="_blank"><img class="donate" width="36%" src="images/Asset%2039.png" alt="حمایت مالی از شبکه رهام کیدز"></a>
+            </div>
+            <div class="footer">
+                <p class="margin-30">Copy rights | All rights reserved by Rohamkids channel</p>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>درباره شبکه کودکِ رهام کیدز </h2>
+            </div>
+            <div class="modal-body">
+                <p>رهام چراغی </p>
+                <p>متولد دی ماه 95 - شیراز </p>
+                <p> ایده رهام کیدز از 3 سالگیِ رهام شکل گرفت ، زمانی که رهام علاقهِ خود به اجرا و گویندگی را نشان داد ،متاسفانه تمامِ شوهایِ کودکِ قدرتمند، روسی زبان و انگلیسی زبان هستند و برای گروه سنی (الف) بسیار مضر !!! چراکه در این سن کودک نیاز به کودکِ همزبان دارد تا بتواند خود را با محیطِ همزبانِ خود زود تر هماهنگ کند </p>
+
+                <p>امیدواریم که این محتوی بتونه اوقات شیرین و سازنده ای برای دلبندتون ایجاد کنه</p>
+
+            </div>
+            <div class="modal-footer">
+                <p>❤❤❤</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body></html>
